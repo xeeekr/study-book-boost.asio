@@ -57,7 +57,7 @@ int main() {
 
 		readFromSocketEnhanced(sock);
 	} catch (system::system_error &e) {
-		std::cout << "Error occured! Error code = " << e.code() << ". Message: " << e.what();
+		std::cout << "Error occurred! Error code = " << e.code() << ". Message: " << e.what();
 
 		return e.code().value();
 	}

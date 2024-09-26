@@ -26,7 +26,7 @@ int main() {
 		acceptor.accept(sock);
 	} catch (system::system_error &e) {
 		std::cout
-				<< "Error occured! Error code = "
+				<< "Error occurred! Error code = "
 				<< e.code() << ". Message: " << e.what();
 		return e.code().value();
 	}

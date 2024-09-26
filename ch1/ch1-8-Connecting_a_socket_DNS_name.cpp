@@ -23,7 +23,7 @@ int main() {
 		asio::connect(sock, it);
 	} catch (system::system_error &e) {
 		std::cout
-				<< "Error occured! Error code = "
+				<< "Error occurred! Error code = "
 				<< e.code() << ". Message: " << e.what();
 		return e.code().value();
 	}
