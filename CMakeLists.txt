@@ -11,3 +11,4 @@ include_directories(${Boost_INCLUDE_DIR})
 
 add_subdirectory(./ch1)
 add_subdirectory(./ch2)
+add_subdirectory(./ch3)
