@@ -1,6 +1,8 @@
 #include <boost/asio.hpp>
 #include <iostream>
 
+#include <thread>
+
 using namespace boost;
 
 class SyncTCPClient {
@@ -72,6 +74,9 @@ int main() {
 		client.close();
 	}
 	catch (system::system_error &e) {
+		if (e.code() == asio::error::not_connected) {
+			return 0;
+		}
 		std::cout << "Error occurred! Error code = " << e.code() << ". Message: " << e.what();
 
 		return e.code().value();
